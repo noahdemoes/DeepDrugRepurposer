@@ -58,10 +58,9 @@ We began with a baseline logistic classification model as a well-known benchmark
 
 
 
+![Figure 1](images/image1.PNG "image_tooltip")
 
 
-
-![alt_text](images/drug_target_degree.png "image_tooltip")
 
 
 Figure 1: Shows the early F1-score results of models on the test dataset.
@@ -71,6 +70,7 @@ An important choice we made in the project was the feature engineering concernin
 As shown in Fig 2, a convolutional layer is used to perform a filtering operation on an image. In a deep convolutional neural network, these filters are learned over multiple examples, learning to filter high level features, in every layer of convolution, that are important for the classification task at hand, from the underlying data.
 
 
+![Figure 2](images/Image2.PNG "Figure 2")
 
 Figure 2: An example of a convolutional filter that extracts the shape of an animal’s head. This filter is then used by layers downstream to further extract higher level features, or use this directly to classify this image.
 
@@ -78,6 +78,8 @@ Alternatively, word vectors use the same high level structural information of th
 
 In addition to the DrugBank testing dataset, we also want to use a validation set external to DrugBank. [5] If the model produces similar results on the external datasets, we can be more confident that our model is capturing patterns related to chemical-gene relationships rather than only learning how to capture intricacies of DrugBank. We choose to use BindingDB because of its large number of samples and pre-listed chemical SMILES information and gene information. However, BindingDB lists many chemical-gene interactions, and does not label which reactions are actually used as drugs. Therefore, we will need to assign labels to the samples as which pairs represent drugs (samples of label 1, ‘drug’), and which do not have a drug relationship (samples of label 0, ‘not drug’). 
 
+
+![Figure 3](images/Image3.PNG "Figure 3")
 
 Figure 3: 1) The distribution of chemical reaction measurements for all of Binding DB and listed DrugBank samples. 2) The normalized IC50 measurement distribution for all of Binding DB  and listed Drugbank samples.
 
@@ -88,24 +90,12 @@ We choose to create a threshold for chemical reaction measurements to create ‘
 
 
 # Bibliography
-[1] Business Research Company. The Growing Pharmaceuticals Market: Expert Forecasts and Analysis. Market Research Blog Available at: https://blog.marketresearch.com/the-growing-pharmaceuticals-market-expert-forecasts-and-analysis. 
+[1] Business Research Company. “The Growing Pharmaceuticals Market: Expert Forecasts and Analysis.” Market Research Blog, blog.marketresearch.com/the-growing-pharmaceuticals-market-expert-forecasts-and-analysis.
 
-[2] Cheng, F. et al. Network-based approach to prediction and population-based validation of in silico drug repurposing. Nature Communications 9, (2018).
+[2] Commissioner, Office of the. “Step 3: Clinical Research.” U.S. Food and Drug Administration, FDA, www.fda.gov/patients/drug-development-process/step-3-clinical-research.
 
-[3] Commissioner, O. of the. Step 3: Clinical Research. U.S. Food and Drug Administration Available at: https://www.fda.gov/patients/drug-development-process/step-3-clinical-research. 
+[3] Dimasi, Joseph A., et al. “Innovation in the Pharmaceutical Industry: New Estimates of R&D Costs.” Journal of Health Economics, vol. 47, 2016, pp. 20–33., doi:10.1016/j.jhealeco.2016.01.012.
 
-[4] Davis, M. I. et al. Comprehensive analysis of kinase inhibitor selectivity. Nature Biotechnology 29, 1046–1051 (2011).
+[4] Gilson, Michael K., et al. “BindingDB in 2015: A Public Database for Medicinal Chemistry, Computational Chemistry and Systems Pharmacology.” Nucleic Acids Research, vol. 44, no. D1, 2015, doi:10.1093/nar/gkv1072.
 
-[5] Dimasi, J. A., Grabowski, H. G. &amp; Hansen, R. W. Innovation in the pharmaceutical industry: New estimates of R&D costs. Journal of Health Economics 47, 20–33 (2016).
-
-[6] Kim, S. et al. PubChem 2019 update: improved access to chemical data. Nucleic Acids Research 47, (2018).
-
-[7] Nadh: Uses, Side Effects, Interactions, Dosage, and Warning. WebMD Available at: https://www.webmd.com/vitamins/ai/ingredientmono-1016/nadh. 
-
-[8] Nguyen &amp; Venkatesh, S. Prediction of drug–target binding affinity using graph neural networks. bioRxiv (2019). Available at: http://dx.doi.org/10.1101/684662. 
-
-[9] Tang, J. et al. Making Sense of Large-Scale Kinase Inhibitor Bioactivity Data Sets: A Comparative and Integrative Analysis. Journal of Chemical Information and Modeling 54, 735–743 (2014).
-
-[10] Wishart, D. S. et al. DrugBank 5.0: a major update to the DrugBank database for 2018. Nucleic Acids Research 46, (2017).
-
-
+[5] Wishart, David S, et al. “DrugBank 5.0: a Major Update to the DrugBank Database for 2018.” Nucleic Acids Research, vol. 46, no. D1, 2017, doi:10.1093/nar/gkx1037.
